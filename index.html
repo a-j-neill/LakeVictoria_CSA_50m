@@ -27,12 +27,10 @@
   <div id="map"></div>
   <script>
       var map = L.map('map').setView([-1.3600528055726775, 32.57865399475973], 6.5);
-
+      var conLayer = L.tileLayer('./Connectivity/{z}/{x}/{y}.png', {minZoom: 1, maxZoom: 12, tms: false, attribution: 'SCIMAP Connectivity Map'});	
       var erLayer = L.tileLayer('./Risk/{z}/{x}/{y}.png', {minZoom: 1, maxZoom: 12, tms: false, attribution: 'SCIMAP Nitrate Risk Map'});
-	  
-      var conLayer = L.tileLayer('./Connectivity/{z}/{x}/{y}.png', {minZoom: 1, maxZoom: 12, tms: false, attribution: 'SCIMAP Connectivity Map'}).addTo(map);
-
-      L.control.layers(conLayer,erLayer).addTo(map);
+      
+      L.control.layers({ "Connectivity Map": conLayer }, { "Risk Map": erLayer }).addTo(map);
     
   </script>
 </body>
