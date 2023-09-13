@@ -30,7 +30,7 @@
       var conLayer = L.tileLayer('./Connectivity/{z}/{x}/{y}.png', {minZoom: 1, maxZoom: 12, tms: false, attribution: 'SCIMAP Connectivity Map'}).addTo(map);	
       var erLayer = L.tileLayer('./Risk/{z}/{x}/{y}.png', {minZoom: 1, maxZoom: 12, tms: false, attribution: 'SCIMAP Nitrate Risk Map'});
       
-      L.control.layers({ "Connectivity Map": conLayer }, { "Risk Map": erLayer }).addTo(map);
+      L.control.layers({ "Risk Map": erLayer }).addTo(map);
     
   </script>
 </body>
