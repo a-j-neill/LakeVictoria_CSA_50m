@@ -28,13 +28,13 @@
   <script>
       var map = L.map('map').setView([-1.3600528055726775, 32.57865399475973], 6.5);
 	  
-      var conLayer = L.tileLayer('./Connectivity/{z}/{x}/{y}.png', {minZoom: 1, maxZoom: 12, tms: false, attribution: 'SCIMAP Connectivity Map'}).addTo(map);	
+      var conLayer = L.tileLayer('./Connectivity/{z}/{x}/{y}.png', {minZoom: 1, maxZoom: 12, tms: false, attribution: 'SCIMAP Connectivity Map'});	
 	  	  
       var erLayer = L.tileLayer('./Risk/{z}/{x}/{y}.png', {minZoom: 1, maxZoom: 12, tms: false, attribution: 'SCIMAP Nitrate Source Area Risk Map'});
 	  	  
       var chConcRiskLayer = L.tileLayer('./ChConcRisk/{z}/{x}/{y}.png', {minZoom: 1, maxZoom: 12, tms: false, attribution: 'SCIMAP Nitrate Channel Risk Concentration Map'}); 
 	  
-      L.control.layers({ "Nitrate CSA Risk Map": erLayer },{ "Nitrate Channel Risk Concentration Map": chConcRiskLayer }).addTo(map);
+      L.control.layers({ "Connectivity Risk Map": conLayer }, { "Nitrate CSA Risk Map": erLayer },{ "Nitrate Channel Risk Concentration Map": chConcRiskLayer }).addTo(map);
 	  
   </script>
 </body>
