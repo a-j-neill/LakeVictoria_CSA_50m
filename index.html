@@ -34,7 +34,7 @@
 	  	  
       var chConcRiskLayer = L.tileLayer('./ChConcRisk/{z}/{x}/{y}.png', {minZoom: 1, maxZoom: 12, tms: false, attribution: 'SCIMAP Nitrate Channel Risk Concentration Map'}); 
 	  
-      L.control.layers({ "Connectivity Risk Map": conLayer }, { "Nitrate CSA Risk Map": erLayer },{ "Nitrate Channel Risk Concentration Map": chConcRiskLayer }).addTo(map);
+      L.control.layers({ "Nitrate CSA Risk Map": erLayer },{ "Nitrate Channel Risk Concentration Map": chConcRiskLayer }).addTo(map);
 	  
   </script>
 </body>
