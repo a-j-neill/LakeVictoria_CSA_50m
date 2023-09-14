@@ -28,9 +28,9 @@
   <script>
       var map = L.map('map').setView([-1.3600528055726775, 32.57865399475973], 6.5);
 
-	  var baseLayer = L.tileLayer('./Basemap/{z}/{x}/{y}.png', {minZoom: 1, maxZoom: 12, tms: false, attribution: 'Basemap'}).addTo(map);	
+      var baseLayer = L.tileLayer('./Basemap/{z}/{x}/{y}.png', {minZoom: 1, maxZoom: 12, tms: false, attribution: 'Basemap'}).addTo(map);	
 	  
-	  var conLayer = L.tileLayer('./Connectivity/{z}/{x}/{y}.png', {minZoom: 1, maxZoom: 12, tms: false, attribution: 'SCIMAP Connectivity Map'});	
+      var conLayer = L.tileLayer('./Connectivity/{z}/{x}/{y}.png', {minZoom: 1, maxZoom: 12, tms: false, attribution: 'SCIMAP Connectivity Map'});	
 	  	  
       var erLayer = L.tileLayer('./Risk/{z}/{x}/{y}.png', {minZoom: 1, maxZoom: 12, tms: false, attribution: 'SCIMAP Nitrate Source Area Risk Map'});
 	  	  
